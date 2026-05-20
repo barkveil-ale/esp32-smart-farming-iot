@@ -1,0 +1,881 @@
+[
+    {
+        "id": "8d8b3733db1dce51",
+        "type": "tab",
+        "label": "TA Dafrot Farm",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a0e3e8cca417ab15",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 300,
+        "wires": [
+            [
+                "6931312f9f3a0b46"
+            ]
+        ]
+    },
+    {
+        "id": "9045bb57998cf63c",
+        "type": "ui_gauge",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "978ef87e0d94d82c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Suhu",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "eec0a907855a33f4",
+        "type": "ui_chart",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "978ef87e0d94d82c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Suhu",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13e6e1660fa03918",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/humi",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "f9ef0f0f8ec8b7da"
+            ]
+        ]
+    },
+    {
+        "id": "93ad7ac45a33ba2c",
+        "type": "ui_chart",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "7b56aea74ecca802",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb5bb02966e8e2bb",
+        "type": "ui_gauge",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "7b56aea74ecca802",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 460,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "e78c8d899a951c4a",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/tempds",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "b2b57e2238082f2f"
+            ]
+        ]
+    },
+    {
+        "id": "e63cd1ee1c0f5b51",
+        "type": "ui_gauge",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "caa0cb44afc25426",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temp DS",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 480,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "d86bfaf44e523a38",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/soil",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 80,
+        "wires": [
+            [
+                "b4d85640a9fd5983",
+                "35e746f8a938ec99"
+            ]
+        ]
+    },
+    {
+        "id": "66947a6afb8c44e7",
+        "type": "ui_gauge",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "cbcbe3e2dfdc3748",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Soil",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "diff": false,
+        "className": "",
+        "x": 470,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "914ecf0611d9ae81",
+        "type": "ui_chart",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "group": "cbcbe3e2dfdc3748",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Soil",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d9d03997db7342f5",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/rain",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 220,
+        "wires": [
+            [
+                "b4d85640a9fd5983"
+            ]
+        ]
+    },
+    {
+        "id": "b4d85640a9fd5983",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Rain Status",
+        "func": "let status = String(msg.payload).trim();\nif (status === \"0\") {\n    flow.set(\"rain\", \"Hujan\");\n    msg.payload = \"Hujan\";\n} else {\n    flow.set(\"rain\", \"Cerah\");\n    msg.payload = \"Cerah\";\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "ad1480e7331779d4"
+            ]
+        ]
+    },
+    {
+        "id": "a16c989e9a2e78bc",
+        "type": "ui_text",
+        "z": "8d8b3733db1dce51",
+        "group": "5159a8ea6db1e458",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Rain Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Trebuchet MS,Helvetica,sans-serif",
+        "fontSize": "16",
+        "color": "#000000",
+        "x": 650,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6931312f9f3a0b46",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "temp",
+        "func": "flow.set('last_temp', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 300,
+        "wires": [
+            [
+                "9045bb57998cf63c",
+                "eec0a907855a33f4"
+            ]
+        ]
+    },
+    {
+        "id": "f9ef0f0f8ec8b7da",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "humi",
+        "func": "flow.set('last_humi', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "eb5bb02966e8e2bb",
+                "93ad7ac45a33ba2c"
+            ]
+        ]
+    },
+    {
+        "id": "b2b57e2238082f2f",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "tempds",
+        "func": "flow.set('last_tempds', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [
+                "e63cd1ee1c0f5b51"
+            ]
+        ]
+    },
+    {
+        "id": "35e746f8a938ec99",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "soil",
+        "func": "flow.set('last_soil', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 80,
+        "wires": [
+            [
+                "66947a6afb8c44e7",
+                "914ecf0611d9ae81"
+            ]
+        ]
+    },
+    {
+        "id": "ad1480e7331779d4",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "rain",
+        "func": "flow.set('rain_status', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "a16c989e9a2e78bc",
+                "3817605d1e375c84"
+            ]
+        ]
+    },
+    {
+        "id": "5dd3dce69a2250cb",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Format Data for Sheets",
+        "func": "// Fungsi untuk pad angka (contoh: 5 -> \"05\")\nfunction pad(n) {\n    return n < 10 ? '0' + n : n;\n}\n\n// Dapatkan waktu sekarang di WIB (UTC+7)\nlet now = new Date();\nlet wibOffset = 7 * 60 * 60 * 1000; // Offset WIB (7 jam dalam ms)\nlet wibTime = new Date(now.getTime() + wibOffset);\n\n// Format timestamp: \"YYYY-MM-DD HH:mm:ss WIB\"\nlet year = wibTime.getUTCFullYear();\nlet month = pad(wibTime.getUTCMonth() + 1);\nlet day = pad(wibTime.getUTCDate());\nlet hours = pad(wibTime.getUTCHours());\nlet minutes = pad(wibTime.getUTCMinutes());\nlet seconds = pad(wibTime.getUTCSeconds());\n\nlet formattedTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} WIB`;\n\n// Data sensor\nlet temp = flow.get('last_temp') || \"N/A\";\nlet humi = flow.get('last_humi') || \"N/A\";\nlet tempds = flow.get('last_tempds') || \"N/A\";\nlet soil = flow.get('last_soil') || \"N/A\";\nlet rain = flow.get('rain_status') || \"N/A\";\nlet pump = flow.get('pump_status') || \"N/A\";\n\nmsg.payload = [[formattedTime, temp, humi, tempds, soil, rain, pump]];\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 620,
+        "wires": [
+            [
+                "c8a2043381583781"
+            ]
+        ]
+    },
+    {
+        "id": "cf74bb1a89aa5575",
+        "type": "inject",
+        "z": "8d8b3733db1dce51",
+        "d": true,
+        "name": "Trigger Every 1 Min",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 500,
+        "y": 620,
+        "wires": [
+            [
+                "5dd3dce69a2250cb"
+            ]
+        ]
+    },
+    {
+        "id": "c8a2043381583781",
+        "type": "GSheet",
+        "z": "8d8b3733db1dce51",
+        "creds": "5ee8f3ace4114b97",
+        "method": "append",
+        "action": "",
+        "sheet": "1JNPQGtoxTzfD8cyhV8B8Z5x4kH1WN5c2xL7GqmxTKsM",
+        "cells": "Sheet1!A1:B2",
+        "flatten": false,
+        "name": "",
+        "x": 1030,
+        "y": 620,
+        "wires": [
+            [
+                "69add91195bd73da"
+            ]
+        ]
+    },
+    {
+        "id": "69add91195bd73da",
+        "type": "debug",
+        "z": "8d8b3733db1dce51",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1240,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "c0b722b13352a232",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Format Data For Sheets",
+        "func": "let pump = flow.get('pump_status') || \"N/A\";  // Pastikan ini ada\nmsg.payload = [[formattedTime, temp, humi, tempds, soil, rain, pump]];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 6,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 460,
+        "wires": [
+            [
+                "c8a2043381583781"
+            ]
+        ]
+    },
+    {
+        "id": "cbda31e6adcac0c1",
+        "type": "debug",
+        "z": "8d8b3733db1dce51",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "3817605d1e375c84",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Auto Pump Logic",
+        "func": "let manual = flow.get(\"manualPump\") === true;\nlet rain = flow.get(\"rain_status\");  // \"Hujan\" atau \"Cerah\"\nlet soil = parseInt(flow.get(\"last_soil\"));\n\nif (manual) {\n    flow.set('pump_status', 'OFF');  // Force matikan pompa\n    msg.payload = 'OFF';\n    return msg;\n}\n\nlet status = \"OFF\";\nif (rain === \"Cerah\" && soil < 65) {\n    status = \"ON\";\n} else if (soil > 75 || rain === \"Hujan\") {\n    status = \"OFF\";\n}\n\nflow.set('pump_status', status);\nmsg.payload = status;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 120,
+        "wires": [
+            [
+                "11d57e9f4ec00920"
+            ]
+        ]
+    },
+    {
+        "id": "5c353820af19ad49",
+        "type": "ui_switch",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "label": "Manual Control Pump",
+        "tooltip": "",
+        "group": "d2295163dd5379f9",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "#FFFF00",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "#FF0000",
+        "animate": true,
+        "className": "",
+        "x": 680,
+        "y": 40,
+        "wires": [
+            [
+                "b5aa55b4214aa3bb"
+            ]
+        ]
+    },
+    {
+        "id": "714d2e3fd982f5cc",
+        "type": "mqtt out",
+        "z": "8d8b3733db1dce51",
+        "name": "Send Manual Control",
+        "topic": "/dafrot-mqtt/in",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "478d58c91647dcb9",
+        "x": 1220,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "11d57e9f4ec00920",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Save Pump Status",
+        "func": "flow.set('pump_status', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 400,
+        "wires": [
+            [
+                "edaec2fcd1d3de5d",
+                "c0b722b13352a232",
+                "cbda31e6adcac0c1"
+            ]
+        ]
+    },
+    {
+        "id": "edaec2fcd1d3de5d",
+        "type": "mqtt out",
+        "z": "8d8b3733db1dce51",
+        "name": "",
+        "topic": "/dafrot-mqtt/pump",
+        "qos": "1",
+        "retain": "",
+        "broker": "478d58c91647dcb9",
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b5aa55b4214aa3bb",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Save Manual Pump Status",
+        "func": "flow.set(\"manualPump\", msg.payload);\n// Tambahkan konversi nilai\nmsg.payload = msg.payload ? \"ON\" : \"OFF\";  // atau \"1\"/\"0\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 40,
+        "wires": [
+            [
+                "714d2e3fd982f5cc"
+            ]
+        ]
+    },
+    {
+        "id": "47e969b542d27e74",
+        "type": "mqtt in",
+        "z": "8d8b3733db1dce51",
+        "name": "Status System",
+        "topic": "/dafrot-mqtt/status",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "478d58c91647dcb9",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 410,
+        "y": 680,
+        "wires": [
+            [
+                "59722239d6bd32f2"
+            ]
+        ]
+    },
+    {
+        "id": "59722239d6bd32f2",
+        "type": "function",
+        "z": "8d8b3733db1dce51",
+        "name": "Filter Aktif",
+        "func": "// Pada function node 'FilterAktif'\nif (msg.payload.active === true || msg.payload.active === \"true\") {\n    flow.set(\"isActive\", true);\n    return msg;\n} else {\n    flow.set(\"isActive\", false);\n    node.status({fill:\"red\", shape:\"ring\", text:\"Device inactive\"});\n    return null;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "5dd3dce69a2250cb"
+            ]
+        ]
+    },
+    {
+        "id": "478d58c91647dcb9",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqtt-dashboard.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "978ef87e0d94d82c",
+        "type": "ui_group",
+        "name": "Suhu",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7b56aea74ecca802",
+        "type": "ui_group",
+        "name": "Humidity",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "caa0cb44afc25426",
+        "type": "ui_group",
+        "name": "Suhu Tanah",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cbcbe3e2dfdc3748",
+        "type": "ui_group",
+        "name": "Soil",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5159a8ea6db1e458",
+        "type": "ui_group",
+        "name": "Rain",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5ee8f3ace4114b97",
+        "type": "gauth",
+        "name": "node-red-sheets-integration@keen-inscriber-464409-v7.iam.gserviceaccount.com"
+    },
+    {
+        "id": "d2295163dd5379f9",
+        "type": "ui_group",
+        "name": "Pompa Air",
+        "tab": "cce8bdcb240e1ca2",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "cce8bdcb240e1ca2",
+        "type": "ui_tab",
+        "name": "Dafrot Farm Dashboard",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
